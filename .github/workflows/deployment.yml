@@ -1,0 +1,32 @@
+name: First Workflow
+
+# run-name: ${{github.actor}}
+
+on: 
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+ 
+jobs:
+  linux-os:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - run: echo "ubuntu-latest"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '21'
+      - run: java MyFirstJava.java
+ #job:
+  # windows-os:
+  #  runs-on: windows-latest
+  #  steps:
+  #  # $GITHUB_WORKSPACE
+   #  - name: Checkout
+    #   uses: actions /checkout@v4.2.2
+     #- run: echo " windows -latest"    
+  
