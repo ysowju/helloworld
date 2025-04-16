@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: selfhostedagent
+  name: sowlinux
  
 steps:
 - task: Maven@3
