@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: Default
+  name: sowjulinux
  
 steps:
 - task: Maven@3
